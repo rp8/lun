@@ -1,0 +1,33 @@
+%h1="Lun (alpha) Aggregated Contents"
+.latestcmts
+  %h4="Latest Comments"
+  - topics = @latest_comments.collect {|c| c.topic}.uniq
+  - topics2 = {}
+  - topics.each {|t| topics2[t.id] = {"topic" => t, "comments" => []}}
+  - @latest_comments.each do |c|
+    - t = topics2[c.topic.id]
+    - t["comments"] << c if t["comments"].length <= 1
+  - topics2.values.each do |t|
+    .title
+      %a{:href=>"#{t["topic"].url}", :target=>'_blank'}=t["topic"].title
+      .cmts
+        - t["comments"].each do |c|
+          .cmt
+            .name=name_or_website(c) + ' on ' + c.created_on.strftime("%b %d, %Y at %I:%M:%S %p %Z")
+            .content=render_newline(c.content)
+.toptopics
+  %h4="Top Posts"
+  - @top_topics.each do |t|
+    .title
+      %a{:href=>"#{t.url}", :target=>'_blank'}=t.title
+      %label{:class=>"counter"}=": Comments (#{t.comment_count})"
+
+.topsites
+  %h4="Top Sites"
+  - @top_sites.each do |s|
+    .name
+      %a{:href=>"#{s.url}", :target=>'_blank'}=s.name.nil? ? s.url : s.name
+      %label{:class=>"counter"}=": Posts (#{s.topic_count})"
+
+.sidebar
+  %h4="<a href='/'>Lun (alpha) Home</a>" 

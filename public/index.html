@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<HEAD>
+  <TITLE>Lun (alpha)</TITLE>
+  <META content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <META content="Web service to provide commenting features to any web page" name="description"/>
+  <META content="lun, web service, json, comments" name="keywords"/>
+	<LINK href="/stylesheets/lun.css" type="text/css" rel="stylesheet"/>
+</HEAD>
+<BODY>
+  <DIV class="page">
+    <H4><A href="/">Lun (alpha) - Free Commenting Service</A></H4>
+
+    <DIV class="main">
+      <P>
+      Lun (alpha) is a free service that provides commenting features on any web pages over the internet. 
+      </P>
+
+      <P>
+      It is very simple to use. Copy and paste the following html code into your web page, and see it in action in seconds.
+      </P>
+
+<PRE><CODE> &lt;div id="lcmts" class="lcmts" closed="false" permalink=""&gt;&lt;/div&gt;
+ &lt;script type="text/javascript" src="http://lun.competo.com/javascripts/lcmt.js"&gt;&lt;/script&gt;</CODE></PRE>
+
+      <P>
+      You can have more control by choosing a permalink for your web page. 
+      </P>
+
+<PRE><CODE> &lt;div id="lcmts" class="lcmts" closed="false" permalink="http://www.example.com/abc"&gt;&lt;/div&gt;</CODE></PRE>
+
+      <P>
+      You may use permalink without the home URL "http://www.example.com/".
+      </P>
+
+<PRE><CODE> &lt;div id="lcmts" class="lcmts" size="" closed="false" permalink="abc"&gt;&lt;/div&gt;</CODE></PRE>
+
+      <P>
+      Lun (alpha) can provide a counter to any topic/thread on your web pages.
+      </P>
+      
+<PRE><CODE> &lt;div class="lcmtcnt" permalink="abc"&gt;&lt;/div&gt;
+ &lt;div class="lcmtcnt" permalink="xyz"&gt;&lt;/div&gt;</CODE></PRE>
+
+      <P>
+      Latest comments and top topics with most comments on a site.
+      </P>
+
+<PRE><CODE> &lt;div id="lcmtlatest" class="lcmtlatest" n="5" permalink=""&gt;&lt;/div&gt; 
+ &lt;div id="lcmttop" class="lcmttop" n="5" permalink=""&gt;&lt;/div&gt;</CODE></PRE>
+
+      <P>
+      Only one script tag for "lcmt.js" is required in any web page. Place this tag after all Lun tags.
+      </P>
+
+      <P>
+      Finally, Lun (alpha) is FREE and we welcome your
+      <A href="/comment.html" title="">comments and support</A>.
+      </P>
+
+    </DIV>
+
+    <DIV class="sidebar">
+      <H4><A href="http://www.competo.com/">Blogs</A></H4>
+      <H4><A href="/test/lun_test.html">Demo</A></H4>
+      <H4><A href="/api.html">APIs</A></H4>
+      <H4><A href="/comment.html">Feedbacks</A></H4>
+      <H4><A href="/support.html" title="Click for Lun support page">Tech Support</A></H4>
+      <H4><A href="/tos.html">Terms of Use</A></H4>
+      <H4>Latest Comments</H4>
+      <DIV permalink="http://lun.competo.com/" n="5" class="lcmtlatest" id="lcmtlatest"></DIV>
+
+  </DIV>
+
+  <DIV class="footer">
+    <div class="copyright">Copyright © 2008 Competo Solutions, Inc. All rights reserved.</div>
+    <SCRIPT src="http://lun.competo.com/js/lcmt.js" type="text/javascript"></SCRIPT>
+    <!--
+    <SCRIPT type="text/javascript"><!--
+      google_ad_client = "pub-7625476208947846";
+      /* LUN-468x60 */
+      google_ad_slot = "2515912700";
+      google_ad_width = 468;
+      google_ad_height = 60;
+      //-->
+    </SCRIPT>
+    <SCRIPT src="http://pagead2.googlesyndication.com/pagead/show_ads.js" type="text/javascript"></SCRIPT>
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+      try {
+      var pageTracker = _gat._getTracker("UA-6663168-1");
+      pageTracker._trackPageview();
+      } catch(err) {}</script>
+    -->
+  </DIV>
+
+</BODY>
+</HTML>

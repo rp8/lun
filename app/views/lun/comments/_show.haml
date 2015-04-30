@@ -1,0 +1,8 @@
+.lcmttopic
+  %h4 Comments
+  - for c in @comments
+    .lcmtcomment
+      .lcmtuser
+        .lcmtuname=name_or_website(c)
+        .lcmtat=c.created_on
+      .lcmtcontent=render_newline(c.content)

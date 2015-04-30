@@ -1,0 +1,17 @@
+.lcmtnew
+  %h4 Leave a comment
+  = flash_messages
+  - if @errors and !@errors.empty?
+    - @errors.each do |attr,msg| 
+      %label{:class=>'lcmterr'}=msg
+  - form_remote_tag(:html => {:id => 'lcmtform'}, :url => {:action => 'create'}) do |f|
+    = hidden_field_tag :u, @comment.nil? ? '' : @comment.topic.url
+    %label Name (required)
+    = text_field_tag :n, @comment.created_by, :class => 'lcmtinput'
+    %label Email (required)
+    = text_field_tag :e, @comment.email, :class => 'lcmtinput'
+    %label Website
+    = text_field_tag :w, @comment.website, :class => 'lcmtinput'
+    %label Comment (required)
+    = text_area_tag :c, @comment.content, :cols => 75, :rows => 8, :class => 'lcmtinput'
+    = link_to_remote 'Submit', :submit => 'lcmtform', :url => {:controller => '/cmt', :action => 'create.html'}
